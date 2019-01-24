@@ -16,7 +16,7 @@ public class Employee {
 	@NonNull
 	public String e_name;
 	@NonNull
-	public String e_salary;
+	public double e_salary;
 	@NonNull
 	public String e_country;
 	@NonNull

@@ -1,4 +1,4 @@
-package com.akil.DatabaseUtil;
+package com.akil.databaseUtil;
 
 
 import java.sql.Connection;
