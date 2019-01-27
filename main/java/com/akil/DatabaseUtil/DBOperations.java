@@ -372,21 +372,20 @@ public class DBOperations {
 	}
 
 	public void selfJoin() throws SQLException{
-		String insertSQL = "SELECT [dbo].[T2_Employee_Akil].[Employee_ID]"
-				+ ",[dbo].[T_Employee_Akil].[Employee_ID] as Emp_id"
-				+ ",[dbo].[T2_Employee_Akil].[Employee_Email] as Emp_email"
-				+ ",[dbo].[T_Employee_Akil].[Employee_Name] as Emp_name"  
-				+ ",[dbo].[T2_Employee_Akil].[Employee_Phone] as Emp_phone"
-				+ ",[dbo].[T_Employee_Akil].[Employee_Country] as Emp_country"
-				+ ",[dbo].[T_Employee_Akil].[Employee_City] as Emp_city"
-				+ " FROM [dbo].[T_Employee_Akil]," 
-				+ "[dbo].[T2_Employee_Akil] WHERE [dbo].[T2_Employee_Akil].[Employee_ID]=[dbo].[T_Employee_Akil].[Employee_ID]"
-				+ "ORDER BY [dbo].[T_Employee_Akil].[Employee_Name]";
+		String insertSQL = "SELECT A.[Employee_ID] as Emp_id_T1"
+				+ ",B.[Employee_Email] as Emp_email"
+				+ ",A.[Employee_Name] as Emp_name"  
+				+ ",B.[Employee_Phone] as Emp_phone"
+				+ ",A.[Employee_Country] as Emp_country"
+				+ ",A.[Employee_City] as Emp_city"
+				+ " FROM [dbo].[T_Employee_Akil] A," 
+				+ "[dbo].[T2_Employee_Akil] B WHERE B.[Employee_ID]=A.[Employee_ID]"
+				+ "ORDER BY A.[Employee_Name]";
 		PreparedStatement statement = getInit().prepareStatement(insertSQL);
 		ResultSet rs = statement.executeQuery();
 		
 		while (rs.next()) {
-			int id = rs.getInt("Emp_id");
+			int id = rs.getInt("Emp_id_T1");
 			String name = rs.getString("Emp_name");
 			String e_mail = rs.getString("Emp_email");
 			String phone = rs.getString("Emp_phone");
