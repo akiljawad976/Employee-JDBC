@@ -214,11 +214,32 @@ public class EmployeeDAOimplTest {
 //		boolean done = empdao.FullJoinByID();
 //		assertEquals(true, done);
 //	}
-	@Test
-	public void testSelfJoin() throws SQLException {
-		//Employee emp = new Employee(1,"Ronaldo","250000","adas","asfa","asfd");
-		EmployeeDAOimpl empdao = new EmployeeDAOimpl();
-		boolean done = empdao.SelfJoinByID();
-		assertEquals(true, done);
-	}
+//	@Test
+//	public void testSelfJoin() throws SQLException {
+//		//Employee emp = new Employee(1,"Ronaldo","250000","adas","asfa","asfd");
+//		EmployeeDAOimpl empdao = new EmployeeDAOimpl();
+//		boolean done = empdao.SelfJoinByID();
+//		assertEquals(true, done);
+//	}
+//	@Test
+//	public void testAlterTable() throws SQLException {
+//		//Employee emp = new Employee(1,"Ronaldo","250000","adas","asfa","asfd");
+//		EmployeeDAOimpl empdao = new EmployeeDAOimpl();
+//		boolean done = empdao.AlterTableData("TelePhone");
+//		assertEquals(true, done);
+//	}
+//	@Test
+//	public void testDropTableColumn() throws SQLException {
+//		//Employee emp = new Employee(1,"Ronaldo","250000","adas","asfa","asfd");
+//		EmployeeDAOimpl empdao = new EmployeeDAOimpl();
+//		boolean done = empdao.DropTableData("Fax");
+//		assertEquals(true, done);
+//	}
+//	@Test
+//	public void testModifyTableColumn() throws SQLException {
+//		//Employee emp = new Employee(1,"Ronaldo","250000","adas","asfa","asfd");
+//		EmployeeDAOimpl empdao = new EmployeeDAOimpl();
+//		boolean done = empdao.ModifyTableData("TelePhone");
+//		assertEquals(true, done);
+//	}
 }

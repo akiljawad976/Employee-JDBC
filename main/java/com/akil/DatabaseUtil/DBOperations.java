@@ -396,4 +396,24 @@ public class DBOperations {
 		}		
 		
 	}
+
+	public void alterTableColumn(String s) throws SQLException {
+		String insertSQL = "ALTER TABLE  [dbo].[T2_Employee_Akil] ADD "+s+" varchar(200)"; 
+		PreparedStatement statement = getInit().prepareStatement(insertSQL);
+		statement.executeUpdate();
+	}
+
+	public void dropTableColumn(String col_name) throws SQLException {
+		String insertSQL = "ALTER TABLE  [dbo].[T2_Employee_Akil] DROP COLUMN "+col_name; 
+		PreparedStatement statement = getInit().prepareStatement(insertSQL);
+		statement.executeUpdate();
+		
+	}
+
+	public void modifyTableColumn(String col_name) throws SQLException {
+		String insertSQL = "ALTER TABLE  [dbo].[T2_Employee_Akil] ALTER COLUMN "+col_name+" float"; 
+		PreparedStatement statement = getInit().prepareStatement(insertSQL);
+		statement.executeUpdate();
+		
+	}
 }

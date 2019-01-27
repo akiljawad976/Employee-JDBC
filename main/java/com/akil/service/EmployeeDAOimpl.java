@@ -302,5 +302,44 @@ public class EmployeeDAOimpl implements EmployeeDAO,EmployeeInfoDAO {
 		}
 	}
 
+	@Override
+	public boolean AlterTableData(String Col_name) {
+		DBOperations dbo = new DBOperations();
+		try {
+			dbo.alterTableColumn(Col_name);
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public boolean DropTableData(String col_name) {
+		DBOperations dbo = new DBOperations();
+		try {
+			dbo.dropTableColumn(col_name);
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public boolean ModifyTableData(String col_name) {
+		DBOperations dbo = new DBOperations();
+		try {
+			dbo.modifyTableColumn(col_name);
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
 	
 }

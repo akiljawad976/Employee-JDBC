@@ -9,5 +9,8 @@ public interface EmployeeInfoDAO {
 	boolean RightJoinByID();
 	boolean FullJoinByID();
 	boolean SelfJoinByID();
+	boolean AlterTableData(String col_name);
+	boolean DropTableData(String col_name);
+	boolean ModifyTableData(String col_name);
 	boolean addEmployeeInfo(EmployeeInfo user);
 }
